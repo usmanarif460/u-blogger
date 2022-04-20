@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <title>U-Blogger</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-danger fw-bolder" href="#"
+          >u<span class="text-success fw-bold">Blogger</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Tech</a></li>
+                <li><a class="dropdown-item" href="#">Web</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Support</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Feedback</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Contact us</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-primary" type="submit">
+              Search
+            </button>
+          </form>
+          <div class="mx-2">
+            <button
+              class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#loginModal"
+            >
+              Login
+            </button>
+            <button
+              class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#signupModal"
+            >
+              SignUp
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Login to iCoder</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="form-group form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Check me out</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign Up Modal
+    <div
+      class="modal fade"
+      id="signupModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="signupModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Get an iCoder Account
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="form-group">
+                <label for="cexampleInputPassword1">Confirm Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="cexampleInputPassword1"
+                />
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Creat Account
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div
+      class="modal fade"
+      id="SignUp"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="signupModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Get an iCoder Account
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="form-group">
+                <label for="cexampleInputPassword1">Confirm Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="cexampleInputPassword1"
+                />
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Creat Account
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    -->
+
+    <!-- Slider -->
+
+    <section>
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/img/1.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h2>The Best Coding Blog</h2>
+              <h3>
+                Tech
+                <strong class="text-warning">,News</strong> & Web
+              </h3>
+              <button class="btn btn-danger">Technology</button>
+              <button class="btn btn-primary">Web Development</button>
+              <button class="btn btn-success">Tech Fun</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/2.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h2>The Best Coding Blog</h2>
+              <h3>
+                Tech
+                <strong class="text-warning">,News</strong> & Web
+              </h3>
+              <button class="btn btn-danger">Technology</button>
+              <button class="btn btn-primary">Web Development</button>
+              <button class="btn btn-success">Tech Fun</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/3.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h2>The Best Coding Blog</h2>
+              <h>
+                Tech
+                <strong class="text-warning">,News</strong> & Web
+              </h>
+              <button class="btn btn-danger">Technology</button>
+              <button class="btn btn-primary">Web Development</button>
+              <button class="btn btn-success">Tech Fun</button>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <!-- Cards -->
+    <section class="container mt-4">
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">World</strong>
+              <h3 class="mb-0">Global Conferences</h3>
+              <div class="mb-1 text-muted">Nov 12</div>
+              <p class="card-text mb-auto">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                src="/img/thumb1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Design</strong>
+              <h3 class="mb-0">Learn Designing</h3>
+              <div class="mb-1 text-muted">Nov 11</div>
+              <p class="mb-auto">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                src="/img/thumb2.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-danger">FrontEnd</strong>
+              <h3 class="mb-0">Bootstrap Templates</h3>
+              <div class="mb-1 text-muted">Nov 12</div>
+              <p class="card-text mb-auto">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                src="/img/thumb3.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-warning">Python</strong>
+              <h3 class="mb-0">Learn Python</h3>
+              <div class="mb-1 text-muted">Nov 11</div>
+              <p class="mb-auto">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                src="/img/photo-1503437313881-503a91226402.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="container">
+      <p>
+        © 2020-2021 iCoder, Inc. · <a href="#">Privacy</a> ·
+        <a href="#">Terms</a>
+      </p>
+    </footer>
+  </body>
+</html>
